@@ -1,4 +1,5 @@
 import { Container } from "react-bootstrap";
+import { FormDrink } from "./components/FormDrink";
 function App() {
   return (
     <>
@@ -7,7 +8,7 @@ function App() {
       </header>
 
       <Container className="mt-5">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, blanditiis ea.
+        <FormDrink/>
       </Container>
     </>
   );
