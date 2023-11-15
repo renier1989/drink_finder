@@ -2,8 +2,112 @@ header {
   background-color: #EC3A49;
   color: white;
   text-align: center;
+  padding: 50px 0px;
 }
 header h1 {
   font-family: 'Outfit', sans-serif;
   font-weight: 900;
+}
+
+
+/* TESTING ANIMATION OF PROGRESS BAR WITH THE SCROLL */
+/* #progress{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 1rem;
+  background-color: rgb(153, 153, 153);
+  z-index: 2;
+
+  animation: progress-bar auto linear;
+  animation-timeline: scroll(root block);
+}
+
+@keyframes progress-bar{
+  from {width: 0%;}
+  to {width: 100%;}
+} */
+
+#drink-list{
+  
+animation: reveal linear both;
+animation-timeline: view();
+animation-range: entry 0% cover 50% ;
+}
+
+@keyframes reveal {
+  
+  from{ opacity: 0;}
+  to{ opacity: 1;}
+
+}
+
+
+
+/* ADDING ANIMATION TO HEADER  */
+header {
+  z-index: 1;
+  top: 0;
+  position: sticky;
+
+  animation: header-animation auto linear both;
+  animation-timeline: scroll(root block);
+  animation-range: 0 200px;
+
+}
+
+@keyframes header-animation {
+  to{
+    background: #f86e7a98;
+    backdrop-filter: blur(5px);
+    font-size: 16px;
+    font-weight: 400;
+    padding: 10px 0px;
+  }
+}
+
+
+
+
+/* LOADING */
+.spinner {
+  margin: 200px auto 0;
+  width: 200px;
+  text-align: center;
+}
+
+.spinner > div {
+  width: 34px;
+  height: 34px;
+  background-color: #EC3A49;
+
+  border-radius: 100%;
+  display: inline-block;
+  -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+  animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+}
+
+.spinner .bounce1 {
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+
+.spinner .bounce2 {
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+
+@-webkit-keyframes sk-bouncedelay {
+  0%, 80%, 100% { -webkit-transform: scale(0) }
+  40% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes sk-bouncedelay {
+  0%, 80%, 100% { 
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  } 40% { 
+    -webkit-transform: scale(1.0);
+    transform: scale(1.0);
+  }
 }

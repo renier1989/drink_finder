@@ -5,7 +5,7 @@ export const DrinkItem = ({ drink }) => {
   const { handleShowModal,handleSetDrinkId } = useDrinks();
   return (
     <Col md={2} lg={3}>
-      <Card className="mb-4">
+      <Card className="mb-4" id="drink-list">
         <Card.Img
           variant="top"
           src={drink.strDrinkThumb}

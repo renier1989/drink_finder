@@ -9,7 +9,8 @@ function App() {
     <>
       <CategoryProvider>
         <DrinksProvider>
-          <header className="py-5">
+          <div id="progress"></div>
+          <header >
             <h1>Drink Finder</h1>
           </header>
 
