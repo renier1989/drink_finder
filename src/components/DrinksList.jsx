@@ -5,7 +5,7 @@ import { DrinkItem } from "./DrinkItem"
 export const DrinksList = () => {
     const {drinks} = useDrinks()
   return (
-    <Row>
+    <Row className="mt-4">
         {drinks?.map(drink =>(
             <DrinkItem
                 key={drink.idDrink}
