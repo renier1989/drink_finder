@@ -1,9 +1,12 @@
 import { Button, Form, Col, Row, Alert } from "react-bootstrap";
 import useCategory from "../hooks/useCategory";
+import useDrinks from "../hooks/useDrinks"
 import { useState } from "react";
 
 export const FormDrink = () => {
   const { categories } = useCategory();
+  const { getDrinks } = useDrinks();
+  
   const [alert , setAlert] = useState(false);
   const [search, setSearch] = useState({
     name: "",
@@ -19,6 +22,7 @@ export const FormDrink = () => {
     }
 
     setAlert(false);
+    getDrinks(search)
 
     
 
