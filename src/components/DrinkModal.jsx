@@ -3,7 +3,7 @@ import useDrinks from "../hooks/useDrinks"
 
 
 export const DrinkModal = () => {
-    const {modal, handleShowModal} = useDrinks()
+    const {modal, handleShowModal, recipe} = useDrinks()
   return (
     <Modal show={modal} onHide={handleShowModal}>
         <Modal.Body>
