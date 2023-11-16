@@ -4,6 +4,7 @@ header {
   text-align: center;
   padding: 50px 0px;
 }
+
 header h1 {
   font-family: 'Outfit', sans-serif;
   font-weight: 900;
@@ -28,17 +29,24 @@ header h1 {
   to {width: 100%;}
 } */
 
-#drink-list{
-  
-animation: reveal linear both;
-animation-timeline: view();
-animation-range: entry 0% cover 50% ;
+#drink-list {
+
+  animation: reveal linear both;
+  animation-timeline: view();
+  animation-range: entry 40% cover 30%;
 }
 
 @keyframes reveal {
-  
-  from{ opacity: 0;}
-  to{ opacity: 1;}
+
+  from {
+    opacity: 0;
+    scale: 0.8;
+  }
+
+  to {
+    opacity: 1;
+    scale: 1;
+  }
 
 }
 
@@ -57,7 +65,7 @@ header {
 }
 
 @keyframes header-animation {
-  to{
+  to {
     background: #f86e7a98;
     backdrop-filter: blur(5px);
     font-size: 16px;
@@ -76,7 +84,7 @@ header {
   text-align: center;
 }
 
-.spinner > div {
+.spinner>div {
   width: 34px;
   height: 34px;
   background-color: #EC3A49;
@@ -98,15 +106,28 @@ header {
 }
 
 @-webkit-keyframes sk-bouncedelay {
-  0%, 80%, 100% { -webkit-transform: scale(0) }
-  40% { -webkit-transform: scale(1.0) }
+
+  0%,
+  80%,
+  100% {
+    -webkit-transform: scale(0)
+  }
+
+  40% {
+    -webkit-transform: scale(1.0)
+  }
 }
 
 @keyframes sk-bouncedelay {
-  0%, 80%, 100% { 
+
+  0%,
+  80%,
+  100% {
     -webkit-transform: scale(0);
     transform: scale(0);
-  } 40% { 
+  }
+
+  40% {
     -webkit-transform: scale(1.0);
     transform: scale(1.0);
   }
